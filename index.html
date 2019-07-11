@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-		<title>Product Landing Page</title>
+		<title>Third Floor Syndicate</title>
 		<!-- Bootstrap CSS -->
 		<link
 			rel="stylesheet"
@@ -16,32 +16,134 @@
 
 		<link rel="stylesheet" href="/style.css" />
 	</head>
-
 	<body>
 		<header>
-			<div>
-				<h1>
-					Product Landing Page
-				</h1>
-			</div>
-			<nav>
-				<li><a href="#about">About</a></li>
-				<li><a href="#services">Services</a></li>
-				<li><a href="#products">Products</a></li>
-				<li><a href="#contacts">Contacts</a></li>
+			<nav class="navbar navbar-light bg-light">
+				<a class="navbar-brand" href="#">
+					<img
+						src="/img/Third Floor Syndicate Icon-SM.png"
+						width="30"
+						height="30"
+						class="d-inline-block align-top"
+						alt=""
+					/>
+					<h1>Third Floor Syndicate</h1>
+				</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-toggle="collapse"
+					data-target="#navbarNav"
+					aria-controls="navbarNav"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item active">
+							<a class="nav-link" href="#about">About<span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#services">Services</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Pricing</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link disabled" href="#products">Products</a>
+						</li>
+					</ul>
+				</div>
 			</nav>
 		</header>
 
-		<main>
+		<main class="card-body">
 			<hr />
-			<section>About</section>
+			<section id="about">
+				<h2>About</h2>
+				<div class="card bg-dark text-white">
+					<img src="https://via.placeholder.com/1440x450.png" class="card-img" alt="..." />
+					<div class="card-img-overlay">
+						<h5 class="card-title">Card title</h5>
+						<p class="card-text">
+							This is a wider card with supporting text below as a natural lead-in to additional
+							content. This content is a little bit longer.
+						</p>
+						<p class="card-text">Last updated 3 mins ago</p>
+					</div>
+				</div>
+			</section>
 			<hr />
-			<section>Services</section>
+
+			<section id="Services">
+				<h2>Services</h2>
+				<div class="card-deck">
+					<div class="card">
+						<img src="https://via.placeholder.com/550x450.png" class="card-img-top" alt="..." />
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">
+								This is a longer card with supporting text below as a natural lead-in to additional
+								content. This content is a little bit longer.
+							</p>
+							<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+						</div>
+					</div>
+					<div class="card">
+						<img src="https://via.placeholder.com/550x450.png" class="card-img-top" alt="..." />
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">
+								This card has supporting text below as a natural lead-in to additional content.
+							</p>
+							<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+						</div>
+					</div>
+					<div class="card">
+						<img src="https://via.placeholder.com/550x450.png" class="card-img-top" alt="..." />
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">
+								This is a wider card with supporting text below as a natural lead-in to additional
+								content. This card has even longer content than the first to show that equal height
+								action.
+							</p>
+							<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+						</div>
+					</div>
+				</div>
+			</section>
+
 			<hr />
-			<section>Products</section>
+			<section id="Products">
+				<h2>Products</h2>
+				<div class="card">
+					<div class="card-body">
+						<h5 class="card-title">Card title</h5>
+						<p class="card-text">
+							This is a wider card with supporting text below as a natural lead-in to additional
+							content. This content is a little bit longer.
+						</p>
+						<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+					</div>
+					<img src="https://via.placeholder.com/1440.png" class="card-img-top" alt="..." />
+				</div>
+				<div class="card">
+					<div class="card-body">
+						<h5 class="card-title">Card title</h5>
+						<p class="card-text">
+							This is a wider card with supporting text below as a natural lead-in to additional
+							content. This content is a little bit longer.
+						</p>
+						<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+					</div>
+					<img src="https://via.placeholder.com/1440.png" class="card-img-top" alt="..." />
+				</div>
+			</section>
 		</main>
-		<footer>
-			<hr />
+		<footer id="footer" class="card-footer">
 			<h3>Footer</h3>
 		</footer>
 		<!-- Optional JavaScript -->
