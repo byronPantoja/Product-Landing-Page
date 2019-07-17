@@ -2,10 +2,10 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-		<title>Third Floor Syndicate</title>
+		<title>dbp - Product Landing Page</title>
 		<!-- Bootstrap CSS -->
 		<link
 			rel="stylesheet"
@@ -13,156 +13,213 @@
 			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
 			crossorigin="anonymous"
 		/>
-
 		<link rel="stylesheet" href="/style.css" />
+		<style>
+			html,
+			body {
+				font-family: Arial, Helvetica, sans-serif;
+				background-color: rgb(232, 255, 249);
+			}
+
+			footer {
+				background-color: #f7f7f7;
+			}
+
+			.navbar {
+				position: fixed;
+				top: 0;
+				background-color: #00ffbb !important;
+			}
+
+			.navbar.scrolled {
+				background-color: rgba(232, 255, 249) !important;
+				transition: background-color 0s ease-in-out 0.2s;
+			}
+
+			.about-img {
+				background-image: url('/img/marijuana-1114713_1920.jpg');
+				max-height: 100%;
+				background-attachment: fixed;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+
+			.fas .fa-clinic-medical i {
+				color: #eee8ff;
+			}
+		</style>
 	</head>
+
 	<body>
-		<header>
-			<nav class="navbar navbar-light bg-light">
-				<a class="navbar-brand" href="#">
-					<img
-						src="/img/Third Floor Syndicate Icon-SM.png"
-						width="30"
-						height="30"
-						class="d-inline-block align-top"
-						alt=""
-					/>
-					<h1>Third Floor Syndicate</h1>
-				</a>
+		<header id="header" class="mb-5">
+			<nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top">
+				<a class="navbar-brand" href="/"><img src="/img/glyphicon.svg"/></a>
 				<button
 					class="navbar-toggler"
 					type="button"
 					data-toggle="collapse"
-					data-target="#navbarNav"
-					aria-controls="navbarNav"
+					data-target="#navbarNavAltMarkup"
+					aria-controls="navbarNavAltMarkup"
 					aria-expanded="false"
 					aria-label="Toggle navigation"
 				>
 					<span class="navbar-toggler-icon"></span>
 				</button>
-				<div class="collapse navbar-collapse" id="navbarNav">
-					<ul class="navbar-nav">
-						<li class="nav-item active">
-							<a class="nav-link" href="#about">About<span class="sr-only">(current)</span></a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#services">Services</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Pricing</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link disabled" href="#products">Products</a>
-						</li>
-					</ul>
+				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+					<div class="navbar-nav">
+						<a class="nav-item nav-link active" href="#about"
+							>About Us<span class="sr-only">(current)</span></a
+						>
+						<a class="nav-item nav-link" href="#products">Products</a>
+						<a class="nav-item nav-link" href="#production">Production</a>
+					</div>
 				</div>
 			</nav>
 		</header>
-
-		<main class="card-body">
-			<hr />
+		<main role="main">
 			<section id="about">
-				<h2>About</h2>
-				<div class="card bg-dark text-white">
-					<img src="https://via.placeholder.com/1440x450.png" class="card-img" alt="..." />
-					<div class="card-img-overlay">
-						<h5 class="card-title">Card title</h5>
-						<p class="card-text">
-							This is a wider card with supporting text below as a natural lead-in to additional
-							content. This content is a little bit longer.
-						</p>
-						<p class="card-text">Last updated 3 mins ago</p>
-					</div>
-				</div>
-			</section>
-			<hr />
-
-			<section id="Services">
-				<h2>Services</h2>
-				<div class="card-deck">
-					<div class="card">
-						<img src="https://via.placeholder.com/550x450.png" class="card-img-top" alt="..." />
-						<div class="card-body">
-							<h5 class="card-title">Card title</h5>
-							<p class="card-text">
-								This is a longer card with supporting text below as a natural lead-in to additional
-								content. This content is a little bit longer.
-							</p>
-							<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-						</div>
-					</div>
-					<div class="card">
-						<img src="https://via.placeholder.com/550x450.png" class="card-img-top" alt="..." />
-						<div class="card-body">
-							<h5 class="card-title">Card title</h5>
-							<p class="card-text">
-								This card has supporting text below as a natural lead-in to additional content.
-							</p>
-							<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-						</div>
-					</div>
-					<div class="card">
-						<img src="https://via.placeholder.com/550x450.png" class="card-img-top" alt="..." />
-						<div class="card-body">
-							<h5 class="card-title">Card title</h5>
-							<p class="card-text">
-								This is a wider card with supporting text below as a natural lead-in to additional
-								content. This card has even longer content than the first to show that equal height
-								action.
-							</p>
-							<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+				<div class="container-fluid">
+					<div class="row about-img">
+						<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center">
+							<div class="col-md-12 p-lg-5 mx-auto my-5">
+								<h1 class="display-4 font-weight-normal">
+									<img src="/img/Logo - Brand-LG.png" class="mt-5 image-fluid shadow-large"
+									style="width: 100%; max-width: 60rem" alt="Natural Medical Marijuana"
+								</h1>
+								<a class="btn btn-outline-secondary mt-5 text-white border-white" href="#"
+									>Our Network</a
+								>
+							</div>
+							<div class="product-device d-none d-md-block display-4 text-white">
+								<h1>About</h1>
+							</div>
+							<div class="product-device product-device-2 d-none d-md-block text-white">
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, voluptatum aut dolor
+									temporibus possimus minima nisi cupiditate placeat facilis eveniet nesciunt
+									deleniti rerum iusto beatae repellat quidem ea aperiam mollitia? Sequi rerum ab
+									expedita at ipsa omnis provident facere facilis illum mollitia, aspernatur nisi
+									incidunt odit dolorem dolorum et nihil quis necessitatibus, ipsam ducimus adipisci
+									ut? Temporibus qui a ipsa. Accusamus est, et consequuntur cupiditate magnam
+									aspernatur eveniet porro quia sapiente cumque quidem obcaecati aperiam atque illum
+									animi quas! Doloremque nobis accusantium excepturi cum, nisi eos dolores sunt
+									esse? Maiores. Voluptatem possimus praesentium voluptatibus quos neque magnam
+									dicta alias laudantium eaque facilis, modi nisi fugiat dignissimos. Architecto
+									aperiam deserunt quas nihil mollitia ut. Placeat quisquam perferendis adipisci,
+									iure autem commodi. Exercitationem alias doloremque quidem illum aliquam enim
+									iusto expedita ipsa repellendus minima. Labore, obcaecati neque sapiente delectus
+									voluptatum placeat hic repudiandae autem, corporis odit aperiam quis assumenda
+									laboriosam eum laborum.
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-
-			<hr />
-			<section id="Products">
-				<h2>Products</h2>
-				<div class="card">
-					<div class="card-body">
-						<h5 class="card-title">Card title</h5>
-						<p class="card-text">
-							This is a wider card with supporting text below as a natural lead-in to additional
-							content. This content is a little bit longer.
-						</p>
-						<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+			<section id="products" class="mt-5">
+				<div class="container">
+					<div class="row justify-items-center">
+						<div class="card">
+							<div class="card-header">
+								<h2 class="display-4 mt-5">Products</h2>
+								<div class="card-deck mt-5">
+									<div class="card">
+										<img src="/img/blue-4131127_1920.jpg" class="card-img-top" alt="..." />
+										<div class="card-body">
+											<h5 class="card-title">CBD Oil Blue</h5>
+											<p class="card-text">
+												Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui iure sint
+												laborum corrupti, animi placeat cumque illum, ipsum minus quas praesentium,
+												eveniet voluptas modi ea aliquid dolorem vitae dignissimos itaque!Quas
+												officiis perspiciatis ad nostrum. Unde nulla, iste cupiditate pariatur sint
+												tempora. Aliquid magni architecto cupiditate necessitatibus ex cum officiis
+												quae, minus, aut explicabo totam distinctio exercitationem amet, doloremque
+												itaque!
+											</p>
+											<p class="card-text">
+												<small class="text-muted">Last updated 3 mins ago</small>
+											</p>
+										</div>
+									</div>
+									<div class="card">
+										<img src="/img/amber-4131118_1920.jpg" class="card-img-top" alt="..." />
+										<div class="card-body">
+											<h5 class="card-title">CBD Oil Amber</h5>
+											<p class="card-text">
+												Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem
+												quia impedit asperiores alias omnis illum architecto consectetur, minus aut
+												labore at, maiores commodi aperiam autem ex iste voluptatem ipsa cum.Libero,
+												optio molestias, rerum assumenda at fuga alias, laudantium ratione non eius
+												error quod. Deserunt, obcaecati repellat! Similique fugiat ipsum dolore
+												distinctio porro, soluta tenetur impedit eaque excepturi, perferendis
+												laboriosam!
+											</p>
+											<p class="card-text">
+												<small class="text-muted">Last updated 3 mins ago</small>
+											</p>
+										</div>
+									</div>
+									<div class="card">
+										<img src="/img/green-4131123_1920.jpg" class="card-img-top" alt="..." />
+										<div class="card-body">
+											<h5 class="card-title">CBD Oil Green</h5>
+											<p class="card-text">
+												Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cumque ipsum
+												quis, quae, quaerat quasi repellendus facilis dicta sint aspernatur, nisi
+												recusandae vitae illo ut ipsam quidem et repudiandae corporis.Nihil nulla
+												repellendus repellat incidunt quidem libero accusamus tempore laborum
+												voluptates, non nemo velit? Placeat qui, nisi, dolores nobis nam quae, non
+												officiis nihil facilis facere iusto laboriosam soluta enim.
+											</p>
+											<p class="card-text">
+												<small class="text-muted">Last updated 3 mins ago</small>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
-					<img src="https://via.placeholder.com/1440.png" class="card-img-top" alt="..." />
-				</div>
-				<div class="card">
-					<div class="card-body">
-						<h5 class="card-title">Card title</h5>
-						<p class="card-text">
-							This is a wider card with supporting text below as a natural lead-in to additional
-							content. This content is a little bit longer.
-						</p>
-						<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-					</div>
-					<img src="https://via.placeholder.com/1440.png" class="card-img-top" alt="..." />
 				</div>
 			</section>
+			<section id="production">
+				<div class="container">
+					<div class="row">
+						<div class="card mt-5 col-12 justify-content-center">
+							<div class="card-header mx-0 px-0">
+								<h2 class="display-5 m-5 text-centered">Production</h2>
+							</div>
+							<div class="card-body">
+								<h5 class="card-title">Special title treatment</h5>
+								<p class="card-text">
+									With supporting text below as a natural lead-in to additional content.
+								</p>
+								<a href="#" class="btn btn-primary">Go somewhere</a>
+							</div>
+						</div>
 		</main>
-		<footer id="footer" class="card-footer">
-			<h3>Footer</h3>
+		<footer class="container-fluid mt-5 p-4 text-center shadow-sm">
+			<h3>Get Right.</h3>
 		</footer>
-		<!-- Optional JavaScript -->
-		<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 		<script
 			src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
 			crossorigin="anonymous"
 		></script>
+		<script>
+			window.jQuery ||
+				document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>');
+		</script>
 		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+			src="/docs/4.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
 			crossorigin="anonymous"
 		></script>
-		<script
-			src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-			crossorigin="anonymous"
-		></script>
+		<script src="https://kit.fontawesome.com/b422475be4.js"></script>
+		<script>
+			$(window).scroll(function() {
+				$('nav').toggleClass('scrolled', $(this).scrollTop() > 0);
+			});
+		</script>
 	</body>
 </html>
