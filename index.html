@@ -6,6 +6,11 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
 		<title>dbp - Product Landing Page</title>
+
+		<link
+			href="https://fonts.googleapis.com/css?family=Darker+Grotesque:500|Major+Mono+Display&display=swap"
+			rel="stylesheet"
+		/>
 		<!-- Bootstrap CSS -->
 		<link
 			rel="stylesheet"
@@ -14,11 +19,39 @@
 			crossorigin="anonymous"
 		/>
 		<link rel="stylesheet" href="/style.css" />
+		<link rel="stylesheet" href="/bttn.css" />
 		<style>
 			html,
 			body {
-				font-family: Arial, Helvetica, sans-serif;
-				background-color: rgb(232, 255, 249);
+				font-family: 'Darker Grotesque', sans-serif;
+				background-color: #fff;
+			}
+
+			h1,
+			.navbar-brand {
+				text-transform: uppercase;
+				letter-spacing: 0.2rem;
+				background: linear-gradient(180deg, rgb(255, 215, 195), 35%, rgb(245, 89, 49));
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				text-shadow: 1px 1px 10px rgba(95, 95, 95, 0.37);
+			}
+
+			h2,
+			h3,
+			h4,
+			a,
+			li {
+				text-transform: uppercase;
+				letter-spacing: 0.2rem;
+				background: linear-gradient(180deg, #2263e7, 35%, #5279ff);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				text-shadow: 1px 1px 10px rgba(95, 95, 95, 0.37);
+			}
+
+			p {
+				color: #364883;
 			}
 
 			footer {
@@ -26,155 +59,196 @@
 			}
 
 			.navbar {
+				background-color: white;
 				position: fixed;
 				top: 0;
-				background-color: #00ffbb !important;
 			}
 
 			.navbar.scrolled {
-				background-color: rgba(232, 255, 249) !important;
-				transition: background-color 0s ease-in-out 0.2s;
+				background: rgb(238, 232, 255);
+				background: linear-gradient(149deg, rgba(238, 232, 255, 1) 0%, rgba(237, 235, 234, 1) 100%);
+				box-shadow: rgba(125, 139, 136, 0.8) !important;
+			}
+
+			.scrolled {
+				transition: background 500ms;
+			}
+
+			.navbar-toggler-icon .scrolled {
+				border-style: none;
+			}
+
+			.hero-img {
+				background: rgb(255, 231, 231);
+				background: linear-gradient(
+					97deg,
+					rgba(255, 231, 231, 0.7105217086834734) 0%,
+					rgba(249, 255, 232, 0.9598214285714286) 100%
+				);
+				background-size: cover;
+				background-position: top;
+				position: relative;
+				background-attachment: fixed;
+				background-repeat: no-repeat;
+				max-height: 100%;
+				margin-top: -3rem;
 			}
 
 			.about-img {
-				background-image: url('/img/marijuana-1114713_1920.jpg');
-				max-height: 100%;
+				background: rgb(255, 231, 231);
+				background: linear-gradient(
+						97deg,
+						rgba(255, 231, 231, 0.7105217086834734) 10%,
+						rgba(249, 255, 232, 0.9598214285714286) 100%
+					),
+					url('/img/leaf_canopy_above.jpg');
 				background-attachment: fixed;
-				background-repeat: no-repeat;
-				background-size: cover;
+				min-height: 100vh;
+			}
+
+			.production-img {
+				background: rgb(255, 231, 231);
+				background: linear-gradient(
+					97deg,
+					rgba(255, 231, 231, 0.7105217086834734) 10%,
+					rgba(249, 255, 232, 0.9598214285714286) 100%
+				);
+				background-attachment: fixed;
 			}
 
 			.fas .fa-clinic-medical i {
 				color: #eee8ff;
+			}
+
+			.card .product-card {
+				border-color: #f5d9d5;
 			}
 		</style>
 	</head>
 
 	<body>
 		<header id="header" class="mb-5">
-			<nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top">
-				<a class="navbar-brand" href="/"><img src="/img/glyphicon.svg"/></a>
+			<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
+				<a class="navbar-brand" href="#hero"
+					><img src="/img/mjlogo-brand-LG-FLATFLAT.svg" style="height: 2rem" />
+				</a>
 				<button
 					class="navbar-toggler"
 					type="button"
 					data-toggle="collapse"
-					data-target="#navbarNavAltMarkup"
-					aria-controls="navbarNavAltMarkup"
+					data-target="#menu"
+					aria-controls="menu"
 					aria-expanded="false"
 					aria-label="Toggle navigation"
 				>
 					<span class="navbar-toggler-icon"></span>
 				</button>
-				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+				<div class="collapse navbar-collapse" id="menu">
 					<div class="navbar-nav">
-						<a class="nav-item nav-link active" href="#about"
-							>About Us<span class="sr-only">(current)</span></a
+						<a class="navbar-brand nav-item nav-link" href="#hero"
+							>C+<span class="sr-only">(current)</span></a
 						>
-						<a class="nav-item nav-link" href="#products">Products</a>
+						<a class="nav-item nav-link" href="#shop">Shop</a>
+						<a class="nav-item nav-link" href="#about">About</a>
 						<a class="nav-item nav-link" href="#production">Production</a>
 					</div>
 				</div>
 			</nav>
 		</header>
 		<main role="main">
-			<section id="about">
+			<section id="hero">
 				<div class="container-fluid">
-					<div class="row about-img">
-						<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center">
-							<div class="col-md-12 p-lg-5 mx-auto my-5">
-								<h1 class="display-4 font-weight-normal">
-									<img src="/img/Logo - Brand-LG.png" class="mt-5 image-fluid shadow-large"
-									style="width: 100%; max-width: 60rem" alt="Natural Medical Marijuana"
-								</h1>
-								<a class="btn btn-outline-secondary mt-5 text-white border-white" href="#"
-									>Our Network</a
-								>
-							</div>
-							<div class="product-device d-none d-md-block display-4 text-white">
-								<h1>About</h1>
-							</div>
-							<div class="product-device product-device-2 d-none d-md-block text-white">
-								<p>
-									Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, voluptatum aut dolor
-									temporibus possimus minima nisi cupiditate placeat facilis eveniet nesciunt
-									deleniti rerum iusto beatae repellat quidem ea aperiam mollitia? Sequi rerum ab
-									expedita at ipsa omnis provident facere facilis illum mollitia, aspernatur nisi
-									incidunt odit dolorem dolorum et nihil quis necessitatibus, ipsam ducimus adipisci
-									ut? Temporibus qui a ipsa. Accusamus est, et consequuntur cupiditate magnam
-									aspernatur eveniet porro quia sapiente cumque quidem obcaecati aperiam atque illum
-									animi quas! Doloremque nobis accusantium excepturi cum, nisi eos dolores sunt
-									esse? Maiores. Voluptatem possimus praesentium voluptatibus quos neque magnam
-									dicta alias laudantium eaque facilis, modi nisi fugiat dignissimos. Architecto
-									aperiam deserunt quas nihil mollitia ut. Placeat quisquam perferendis adipisci,
-									iure autem commodi. Exercitationem alias doloremque quidem illum aliquam enim
-									iusto expedita ipsa repellendus minima. Labore, obcaecati neque sapiente delectus
-									voluptatum placeat hic repudiandae autem, corporis odit aperiam quis assumenda
-									laboriosam eum laborum.
-								</p>
-							</div>
+					<div class="row hero-img justify-content-center shadow-sm">
+						<div class="mt-5">
+							<img
+								src="/img/mjlogo-brand-LG-FLATFLAT.svg"
+								type="image/svg"
+								class="image-fluid shadow-large pt-5 mt-5"
+								style="width: 100%; max-height: 30rem"
+								alt="A Marijuana Company"
+							/>
+							<h1 class="title display-5 text-center p-2 mb-5">Cannabis Plus</h1>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section id="products" class="mt-5">
-				<div class="container">
-					<div class="row justify-items-center">
-						<div class="card">
-							<div class="card-header">
-								<h2 class="display-4 mt-5">Products</h2>
-								<div class="card-deck mt-5">
-									<div class="card">
-										<img src="/img/blue-4131127_1920.jpg" class="card-img-top" alt="..." />
+			<section id="shop" class="mt-5">
+				<div class="container-fluid">
+					<div class="row products-img justify-items-center">
+						<div class="card" style="background: none; border: none">
+							<div class="card-header text-center" style="background: none; border: none">
+								<h2 class="display-4 mt-5">This Seasons Products</h2>
+								<div class="card-deck mt-5" style="background: none; border: none">
+									<div class="card product-card" style="background: none">
+										<img
+											src="/img/blue-4131119_1920.jpg"
+											class="card-img-top rounded-lg shadow-sm"
+											alt="Arc Light - CBD Oil"
+										/>
 										<div class="card-body">
-											<h5 class="card-title">CBD Oil Blue</h5>
+											<h5 class="card-title">Arc Light</h5>
 											<p class="card-text">
-												Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui iure sint
-												laborum corrupti, animi placeat cumque illum, ipsum minus quas praesentium,
-												eveniet voluptas modi ea aliquid dolorem vitae dignissimos itaque!Quas
-												officiis perspiciatis ad nostrum. Unde nulla, iste cupiditate pariatur sint
-												tempora. Aliquid magni architecto cupiditate necessitatibus ex cum officiis
-												quae, minus, aut explicabo totam distinctio exercitationem amet, doloremque
+												Arc Light CBD Oil consectetur adipisicing elit. Qui iure sint laborum
+												corrupti, animi placeat cumque illum, ipsum minus quas praesentium, eveniet
+												voluptas modi ea aliquid dolorem vitae dignissimos itaque!Quas officiis
+												perspiciatis ad nostrum. Unde nulla, iste cupiditate pariatur sint tempora.
+												Aliquid magni architecto cupiditate necessitatibus ex cum officiis quae,
+												minus, aut explicabo totam distinctio exercitationem amet, doloremque
 												itaque!
 											</p>
-											<p class="card-text">
-												<small class="text-muted">Last updated 3 mins ago</small>
-											</p>
 										</div>
+										<p class="card-text text-center pb-1">
+											<button class="bttn-stretch bttn-md bttn-primary">
+												Starting at <span>$29.99</span>
+											</button>
+										</p>
 									</div>
-									<div class="card">
-										<img src="/img/amber-4131118_1920.jpg" class="card-img-top" alt="..." />
+									<div class="card product-card" style="background: none;">
+										<img
+											src="/img/amber-4131118_1920.jpg"
+											class="card-img-top rounded-lg shadow-sm"
+											alt="blue CBD oil"
+										/>
 										<div class="card-body">
-											<h5 class="card-title">CBD Oil Amber</h5>
+											<h5 class="card-title">Sun Kissed</h5>
 											<p class="card-text">
-												Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem
-												quia impedit asperiores alias omnis illum architecto consectetur, minus aut
-												labore at, maiores commodi aperiam autem ex iste voluptatem ipsa cum.Libero,
-												optio molestias, rerum assumenda at fuga alias, laudantium ratione non eius
-												error quod. Deserunt, obcaecati repellat! Similique fugiat ipsum dolore
-												distinctio porro, soluta tenetur impedit eaque excepturi, perferendis
-												laboriosam!
-											</p>
-											<p class="card-text">
-												<small class="text-muted">Last updated 3 mins ago</small>
+												Sun Kissed CBD Oil ipsum dolor sit amet consectetur adipisicing elit. Qui
+												iure sint laborum corrupti, animi placeat cumque illum, ipsum minus quas
+												praesentium, eveniet voluptas modi ea aliquid dolorem vitae dignissimos
+												itaque!Quas officiis perspiciatis ad nostrum. Unde nulla, iste cupiditate
+												pariatur sint tempora. Aliquid magni architecto cupiditate necessitatibus ex
+												cum officiis quae, minus, aut explicabo totam distinctio exercitationem
+												amet, doloremque itaque!
 											</p>
 										</div>
+										<p class="card-text text-center pb-1">
+											<button class="bttn-stretch bttn-md bttn-primary">
+												Starting at <span>$29.99</span>
+											</button>
+										</p>
 									</div>
-									<div class="card">
-										<img src="/img/green-4131123_1920.jpg" class="card-img-top" alt="..." />
+									<div class="card product-card" style="background: none">
+										<img
+											src="/img/green-4131123_1920.jpg"
+											class="card-img-top rounded-lg shadow-sm"
+											alt="blue CBD oil"
+										/>
 										<div class="card-body">
-											<h5 class="card-title">CBD Oil Green</h5>
+											<h5 class="card-title">Misty Mountain Stream</h5>
 											<p class="card-text">
-												Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cumque ipsum
-												quis, quae, quaerat quasi repellendus facilis dicta sint aspernatur, nisi
-												recusandae vitae illo ut ipsam quidem et repudiandae corporis.Nihil nulla
-												repellendus repellat incidunt quidem libero accusamus tempore laborum
-												voluptates, non nemo velit? Placeat qui, nisi, dolores nobis nam quae, non
-												officiis nihil facilis facere iusto laboriosam soluta enim.
-											</p>
-											<p class="card-text">
-												<small class="text-muted">Last updated 3 mins ago</small>
+												Misty Mountain Stream ui iure sint laborum corrupti, animi placeat cumque
+												illum, ipsum minus quas praesentium, eveniet voluptas modi ea aliquid
+												dolorem vitae dignissimos itaque!Quas officiis perspiciatis ad nostrum. Unde
+												nulla, iste cupiditate pariatur sint tempora. Aliquid magni architecto
+												cupiditate necessitatibus ex cum officiis quae, minus, aut explicabo totam
+												distinctio exercitationem amet, doloremque itaque!
 											</p>
 										</div>
+										<p class="card-text text-center pb-1">
+											<button class="bttn-stretch bttn-md bttn-primary">
+												Starting at <span>$29.99</span>
+											</button>
+										</p>
 									</div>
 								</div>
 							</div>
@@ -182,43 +256,111 @@
 					</div>
 				</div>
 			</section>
-			<section id="production">
-				<div class="container">
-					<div class="row">
-						<div class="card mt-5 col-12 justify-content-center">
-							<div class="card-header mx-0 px-0">
-								<h2 class="display-5 m-5 text-centered">Production</h2>
-							</div>
-							<div class="card-body">
-								<h5 class="card-title">Special title treatment</h5>
+			<section id="about">
+				<div class="container-fluid">
+					<div class="row about-img pt-2 mt-5 shadow-sm">
+						<div class="card p-5 mb-5" style="background: none; border: none">
+							<div class="card-header mt-5" style="background: none; border: none">
+								<h2 class="card-title display-4 mt-5">About Our Community</h2>
+
 								<p class="card-text">
-									With supporting text below as a natural lead-in to additional content.
+									Cannabis Plus is a community of farmers, researchers, and families focused on
+									production of high quality CBD oil from sit amet strains currated from our network
+									consectetur, adipisicing elit. Perferendis vitae sequi ab ratione quas, numquam
+									molestias cupiditate corporis qui rem debitis vero eligendi officiis provident
+									cumque quo itaque molestiae quae? Nisi, placeat dolore reprehenderit et quos
+									impedit asperiores magni deserunt expedita architecto laborum praesentium minus.
+									Tempore corporis quasi, dolores totam at in accusamus temporibus. Cupiditate
+									reprehenderit modi maxime tempora similique. Distinctio nobis pariatur quisquam
+									eum, sit ex quis nam optio amet aut animi harum at porro. Sint, quia nesciunt quos
+									rerum facere nobis, debitis dignissimos vero iure cumque quasi! Expedita.
+									Perferendis officia exercitationem veniam placeat voluptatum error debitis
+									nesciunt ipsum natus neque quam est porro blanditiis totam explicabo, perspiciatis
+									vitae minima odio amet voluptate a, unde veritatis consequuntur quidem! Velit?
+									Iste excepturi laborum odit, nemo ipsam tenetur voluptate rerum doloribus quia
+									atque perferendis officia quo saepe et vitae debitis quasi commodi unde? Ullam at
+									veritatis dignissimos facilis animi voluptatibus nostrum.
 								</p>
-								<a href="#" class="btn btn-primary">Go somewhere</a>
 							</div>
 						</div>
+					</div>
+				</div>
+			</section>
+			<section id="production">
+				<div class="container-fluid">
+					<div class="row production-img">
+						<div
+							class="card col-12 justify-content-center px-0 mx-0"
+							style="background: none; border: none;"
+						>
+							<div
+								class="card-header mx-0 px-0"
+								style="background: none;
+            border: none;"
+							>
+								<h2 class="display-5 m-5 text-center">Production</h2>
+								<img
+									src="/img/green-1648353_1920.jpg"
+									class="image-fluid card-img-bottom"
+									alt="misty mountain cbd"
+								/>
+							</div>
+							<div class="card-body">
+								<h5 class="card-title">Organic Indoor & Outdoor Harvests</h5>
+								<p class="card-text">
+									Seasonly harvested Cannabis Plus Lorem ipsum dolor sit amet consectetur
+									adipisicing elit. Illum distinctio iusto minima nulla, nam quos. Tenetur, earum
+									expedita? Officiis atque tenetur rerum nisi fuga! Deserunt obcaecati molestiae
+									atque cumque harum!Nemo quidem quasi, rerum minima saepe, vero non nam doloremque
+									facere iste delectus dignissimos impedit aspernatur at aliquid necessitatibus
+									reprehenderit nulla hic sit itaque iusto? Quia voluptas quos fugiat odit.
+								</p>
+								<button class="bttn-stretch bttn-md bttn-primary">Read more...</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
-		<footer class="container-fluid mt-5 p-4 text-center shadow-sm">
-			<h3>Get Right.</h3>
+		<footer>
+			<div class="container-fluid p-5 shadow-sm">
+				<div class="row justify-content-center">
+					<p>
+						&#9400; Cannabis Plus<a class="navbar-brand" href="#hero"
+							><img src="/img/mjlogo-brand-LG-FLATFLAT.svg" style="height: 2rem" />
+						</a>
+					</p>
+				</div>
+				<div class="row justify-content-center">
+					<p>
+						This site was created and designed by
+						<a href="https://github.com/byronPantoja">Developer833</a> as a FreeCode Camp Final
+						Project.
+					</p>
+				</div>
+			</div>
 		</footer>
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 		<script
 			src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
 			crossorigin="anonymous"
 		></script>
-		<script>
-			window.jQuery ||
-				document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>');
-		</script>
 		<script
-			src="/docs/4.3/dist/js/bootstrap.bundle.min.js"
-			integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 			crossorigin="anonymous"
 		></script>
 		<script src="https://kit.fontawesome.com/b422475be4.js"></script>
 		<script>
 			$(window).scroll(function() {
-				$('nav').toggleClass('scrolled', $(this).scrollTop() > 0);
+				$('nav').toggleClass('scrolled', $(this).scrollTop() > 100);
 			});
 		</script>
 	</body>
