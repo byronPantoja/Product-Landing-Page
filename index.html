@@ -25,6 +25,7 @@
 			body {
 				font-family: 'Darker Grotesque', sans-serif;
 				background-color: #fff;
+				max-width: 120rem;
 			}
 
 			h1,
@@ -47,11 +48,12 @@
 				background: linear-gradient(180deg, #2263e7, 35%, #5279ff);
 				-webkit-background-clip: text;
 				-webkit-text-fill-color: transparent;
-				text-shadow: 1px 1px 10px rgba(95, 95, 95, 0.37);
+				padding-bottom: 1rem;
 			}
 
 			p {
 				color: #364883;
+				max-width: 60rem;
 			}
 
 			footer {
@@ -91,7 +93,6 @@
 				background-attachment: fixed;
 				background-repeat: no-repeat;
 				max-height: 100%;
-				margin-top: -3rem;
 			}
 
 			.about-img {
@@ -103,7 +104,6 @@
 					),
 					url('/img/leaf_canopy_above.jpg');
 				background-attachment: fixed;
-				min-height: 100vh;
 			}
 
 			.production-img {
@@ -113,7 +113,6 @@
 					rgba(255, 231, 231, 0.7105217086834734) 10%,
 					rgba(249, 255, 232, 0.9598214285714286) 100%
 				);
-				background-attachment: fixed;
 			}
 
 			.fas .fa-clinic-medical i {
@@ -123,14 +122,76 @@
 			.card .product-card {
 				border-color: #f5d9d5;
 			}
+			.bg_video {
+				position: relative;
+				margin-top: -3rem;
+			}
+			.bg-video {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				max-width: 188rem;
+				z-index: 0;
+				opacity: 0.15;
+				overflow: hidden;
+			}
+			.bg-video__content {
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+				overflow: hidden;
+			}
+
+			.bttn-unite.bttn-primary {
+				border-color: #f5d9d5;
+				color: #f55931;
+			}
+
+			.bttn-unite.bttn-primary:focus,
+			.bttn-unite.bttn-primary:hover {
+				background: #f5d9d5;
+				color: #364883;
+			}
+
+			.bttn-unite.bttn-primary:before {
+				background: #f9ffe8;
+			}
+
+			.bttn-unite.bttn-primary:after {
+				background: #e8ffef;
+			}
+
+			.display-4 {
+				font-size: 1.6rem;
+			}
+
+			@include media-breakpoint-up(sm) {
+				html {
+					font-size: 1.2rem;
+				}
+			}
+
+			@include media-breakpoint-up(md) {
+				html {
+					font-size: 1.4rem;
+				}
+			}
+
+			@include media-breakpoint-up(lg) {
+				html {
+					font-size: 1.6rem;
+				}
+			}
 		</style>
 	</head>
 
 	<body>
 		<header id="header" class="mb-5">
-			<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
+			<nav id="nav-bar" class="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
 				<a class="navbar-brand" href="#hero"
-					><img src="/img/mjlogo-brand-LG-FLATFLAT.svg" style="height: 2rem" />
+					><img id="header-img" src="/img/mjlogo-brand-LG-FLATFLAT.svg" style="height: 2rem" />
 				</a>
 				<button
 					class="navbar-toggler"
@@ -158,16 +219,19 @@
 		<main role="main">
 			<section id="hero">
 				<div class="container-fluid">
-					<div class="row hero-img justify-content-center shadow-sm">
-						<div class="mt-5">
+					<div class="row hero-img shadow-sm">
+						<div class="container mt-5 text-center">
 							<img
 								src="/img/mjlogo-brand-LG-FLATFLAT.svg"
 								type="image/svg"
 								class="image-fluid shadow-large pt-5 mt-5"
-								style="width: 100%; max-height: 30rem"
+								style="width: 100%; max-height: 25rem"
 								alt="A Marijuana Company"
 							/>
-							<h1 class="title display-5 text-center p-2 mb-5">Cannabis Plus</h1>
+							<h1 class="title display-5 p-2 mb-5">Cannabis Plus</h1>
+							<button class="bttn-unite bttn-md bttn-primary mb-5">
+								<a href="#login">Log In</a>
+							</button>
 						</div>
 					</div>
 				</div>
@@ -258,10 +322,10 @@
 			</section>
 			<section id="about">
 				<div class="container-fluid">
-					<div class="row about-img pt-2 mt-5 shadow-sm">
+					<div class="row about-img pt-2 shadow-sm justify-content-center">
 						<div class="card p-5 mb-5" style="background: none; border: none">
 							<div class="card-header mt-5" style="background: none; border: none">
-								<h2 class="card-title display-4 mt-5">About Our Community</h2>
+								<h2 class="card-title display-4 mt-3 text-center">About Our Community</h2>
 
 								<p class="card-text">
 									Cannabis Plus is a community of farmers, researchers, and families focused on
@@ -287,38 +351,119 @@
 				</div>
 			</section>
 			<section id="production">
-				<div class="container-fluid">
-					<div class="row production-img">
-						<div
-							class="card col-12 justify-content-center px-0 mx-0"
-							style="background: none; border: none;"
-						>
-							<div
-								class="card-header mx-0 px-0"
-								style="background: none;
-            border: none;"
-							>
-								<h2 class="display-5 m-5 text-center">Production</h2>
-								<img
-									src="/img/green-1648353_1920.jpg"
-									class="image-fluid card-img-bottom"
-									alt="misty mountain cbd"
-								/>
-							</div>
-							<div class="card-body">
-								<h5 class="card-title">Organic Indoor & Outdoor Harvests</h5>
-								<p class="card-text">
-									Seasonly harvested Cannabis Plus Lorem ipsum dolor sit amet consectetur
-									adipisicing elit. Illum distinctio iusto minima nulla, nam quos. Tenetur, earum
-									expedita? Officiis atque tenetur rerum nisi fuga! Deserunt obcaecati molestiae
-									atque cumque harum!Nemo quidem quasi, rerum minima saepe, vero non nam doloremque
-									facere iste delectus dignissimos impedit aspernatur at aliquid necessitatibus
-									reprehenderit nulla hic sit itaque iusto? Quia voluptas quos fugiat odit.
-								</p>
-								<button class="bttn-stretch bttn-md bttn-primary">Read more...</button>
-							</div>
+				<div class="container pb-5">
+					<h2 class="display-4 m-3 text-center" style="padding-top: 5rem">Production</h2>
+					<div class="card mb-3">
+						<img class="card-img-top" src="/img/herb-2915337_1920.jpg" alt="Card image cap" />
+						<div class="card-body">
+							<h5 class="card-title">Indoor Operations</h5>
+							<p class="card-text">
+								Cannabis Plus has a steady supply from our indoor Lorem ipsum dolor sit, amet
+								consectetur adipisicing elit. Error dolorem molestias, iure sint nemo dolores, at
+								odit, quas architecto dolorum exercitationem pariatur cum vel quos commodi fuga
+								molestiae. Quo, officia? Assumenda vitae eius ipsa! Ratione officiis eum esse?
+								Tempora harum aliquam aspernatur ex. Cumque in, sit rem reprehenderit illum quod
+								possimus consectetur, ea incidunt impedit nobis ut quia. Minus, temporibus.
+								Similique quidem qui eum incidunt, quo est ad harum laborum quis labore dicta
+								excepturi ducimus sapiente distinctio ut quae adipisci? Aspernatur earum expedita ea
+								dignissimos sed omnis, vel quas nemo? Suscipit voluptatem totam dolor asperiores
+								obcaecati dolore ducimus magnam quidem, in quaerat assumenda illum consectetur odit
+								recusandae expedita, alias vel delectus rerum veniam quod. Consectetur corrupti
+								quibusdam provident tempora sequi!
+							</p>
+							<button class="bttn-stretch bttn-md bttn-primary">Read more...</button>
 						</div>
 					</div>
+					<div class="card mb-3">
+						<img class="card-img-bottom" src="/img/green-1648353_1920.jpg" alt="Card image cap" />
+						<div class="card-body">
+							<h5 class="card-title">Outdoor Operations</h5>
+							<p class="card-text">
+								Cannabis Plus offers seasonaly grown organic Lorem ipsum dolor sit, amet consectetur
+								adipisicing elit. Perferendis, beatae. Architecto eligendi, quo labore non
+								temporibus quas voluptas? Saepe id nostrum tenetur distinctio adipisci nam unde
+								pariatur libero facilis ad. Maiores temporibus impedit quibusdam perferendis ipsum?
+								Accusamus nihil, soluta odio tenetur magnam minima quos quibusdam deleniti optio
+								architecto minus numquam alias veniam provident tempore dolorum nostrum sint ea in
+								accusantium! Possimus veniam nesciunt voluptatem. Ipsam iure, neque veritatis
+								ratione modi facere fuga iste, tenetur quidem sit maiores ex totam accusamus, nihil
+								et ipsum molestiae voluptates? Beatae libero maiores aliquam reprehenderit! Magnam
+								placeat et laborum sint cupiditate quod modi, quisquam laboriosam ipsum aspernatur
+								consequatur repudiandae a consequuntur voluptates quo perspiciatis quia provident
+								delectus! Nobis quis, voluptatem repellat voluptates illo magnam modi? Voluptatibus,
+								nemo molestias tempora vero obcaecati beatae vitae optio, sint incidunt molestiae
+								quos atque reprehenderit expedita facilis earum rerum dicta quod quibusdam nobis
+								porro! Eum ullam alias ipsam excepturi quasi.
+							</p>
+							<button class="bttn-stretch bttn-md bttn-primary">Read more...</button>
+						</div>
+					</div>
+					<div class="card mb-3">
+						<img class="card-img-bottom" src="/img/pill-3069032_1920.jpg" alt="Card image cap" />
+						<div class="card-body">
+							<h5 class="card-title">Production Lab</h5>
+							<p class="card-text">
+								Our high-tech lab allows us to produce some of the finest CBD oil ipsum dolor sit,
+								amet consectetur adipisicing elit. Perferendis, beatae. Cannabis Plus CBD oil is
+								used in premium products such as Architecto eligendi, quo labore non temporibus quas
+								voluptas? Saepe id nostrum tenetur distinctio adipisci nam unde pariatur libero
+								facilis ad. Maiores temporibus impedit quibusdam perferendis ipsum? Accusamus nihil,
+								soluta odio tenetur magnam minima quos quibusdam deleniti optio architecto minus
+								numquam alias veniam provident tempore dolorum nostrum sint ea in accusantium!
+								Possimus veniam nesciunt voluptatem. Ipsam iure, neque veritatis ratione modi facere
+								fuga iste, tenetur quidem sit maiores ex totam accusamus, nihil et ipsum molestiae
+								voluptates? Beatae libero maiores aliquam reprehenderit! Magnam placeat et laborum
+								sint cupiditate quod modi, quisquam laboriosam ipsum aspernatur consequatur
+								repudiandae a consequuntur voluptates quo perspiciatis quia provident delectus!
+								Nobis quis, voluptatem repellat voluptates illo magnam modi? Voluptatibus, nemo
+								molestias tempora vero obcaecati beatae vitae optio, sint incidunt molestiae quos
+								atque reprehenderit expedita facilis earum rerum dicta quod quibusdam nobis porro!
+								Eum ullam alias ipsam excepturi quasi.
+							</p>
+							<button class="bttn-stretch bttn-md bttn-primary">Read more...</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="login" class="bg_video">
+				<div class="bg-video">
+					<video id="video" class="bg-video__content" autoplay muted loop>
+						<source src="/img/Sea - 24216.mp4" type="video/mp4" />
+					</video>
+				</div>
+				<div class="row justify-content-center">
+					<form
+						id="form"
+						class="p-5"
+						style="max-width: 60rem; z-index:1"
+						action="https://www.freecodecamp.com/email-submit"
+						target="_blank"
+					>
+						<div class="form-group">
+							<label for="exampleInputEmail1">Email address</label>
+							<input
+								name="email"
+								type="email"
+								class="form-control"
+								id="email"
+								aria-describedby="emailHelp"
+								placeholder="Enter email"
+							/>
+							<small id="emailHelp" class="form-text text-muted"
+								>We'll never share your email with anyone else.</small
+							>
+						</div>
+						<div class="form-group">
+							<label for="exampleInputPassword1">Password</label>
+							<input
+								type="password"
+								class="form-control"
+								id="exampleInputPassword1"
+								placeholder="Password"
+							/>
+						</div>
+						<input class="btn btn-primary" input id="submit" type="submit" href="" />
+					</form>
 				</div>
 			</section>
 		</main>
@@ -358,6 +503,7 @@
 			crossorigin="anonymous"
 		></script>
 		<script src="https://kit.fontawesome.com/b422475be4.js"></script>
+		<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 		<script>
 			$(window).scroll(function() {
 				$('nav').toggleClass('scrolled', $(this).scrollTop() > 100);

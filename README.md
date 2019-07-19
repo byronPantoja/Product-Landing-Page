@@ -27,3 +27,7 @@ The logo bg is the flower of life converted into a hexagon shape. added outter a
 Had a bit of fun playing with gradients. And kind of stuck with the same layout style only because I'm trying to understand it more, ie. the fixed attachments, background photos / images /gradients with text / imgs / cards over it. Repeatition is mastery, so expect me to repeat the styles I've used here.
 
 Anyways, this wraps up the product landing page.
+
+### the tests
+
+After taking a break I forgot about the tests to pass the FCC project. So last update to add a form and video. A product video didn't really fit because I couldnt find a free one that was good. So I added a background image instead to the back of the form.
